@@ -41,6 +41,7 @@ nav {
     border: 2px solid grey;
     justify-content: center;
     color: white;
+    box-shadow: 0px 0px 20px white;
 }
 
 nav div ul {
@@ -160,6 +161,7 @@ li {
     transition: 0.1s;
     cursor: pointer;
     transform: scale(1.05);
+    box-shadow: 0px 0px 10px white;
 }
 
 .connectionCards {
@@ -188,7 +190,7 @@ li {
     font-family: "Josefin Sans", sans-serif;
     font-size: 0.7em;
 }
-.HireMe{
+.HireMe, .SeeProjects{
     transition: 0.1s;
     width: 10vw;
     height: 40px;
@@ -202,8 +204,12 @@ li {
     font-family: "Josefin Sans", sans-serif;
     font-weight: 900;
 }
-.HireMe:hover{
+.HireMe:hover, .SeeProjects:hover{
     transition: 0.1s;
     cursor: pointer;
     transform: scale(1.05);
+}
+.SeeProjects{
+    background-color: transparent;
+    border: 1px solid #32CD32;
 }
