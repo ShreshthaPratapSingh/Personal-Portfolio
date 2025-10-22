@@ -29,6 +29,26 @@ body {
                    0px 0px 10px white;  
     }
 }
+@keyframes leftToRight {
+    from{
+        transform: translateX(-1000px);
+        filter: opacity(0);
+    }
+    to{
+        transform: translateX(0);
+        filter: opacity(1);
+    }
+}
+@keyframes rightToLeft {
+    from{
+        transform: translateX(1000px);
+        filter: opacity(0);
+    }
+    to{
+        transform: translateX(0);
+        filter: opacity(1);
+    }
+}
 
 nav {
     display: flex;
@@ -242,4 +262,44 @@ li {
     cursor: pointer;
     transition: 0.1s;
     transform: scale(1.05);
+}
+.godContainer{
+    display: none;
+}
+.Heading_About, .Heading_College{
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    font-size: 1.6em;
+    font-family: "Archivo Black", sans-serif;
+}
+.aboutMe, .aboutCollege{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 30px;
+}
+.Me3{
+    width: 10%;
+    height: auto;
+    border-radius: 100px;
+    border: 2px solid white;
+    animation: leftToRight 1s linear 0s forwards;
+}
+.aboutText{
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.3em;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 20px;
+    animation: rightToLeft 1s ease-in-out 0s forwards;
+}
+.Coll{
+    width: 20%;
+    height: auto;
+    border-radius: 20px;
+    animation: leftToRight 1s linear 0s forwards;
 }
