@@ -73,6 +73,7 @@ li {
     display: flex;
     align-items: center;
     gap: 10px;
+    white-space: nowrap;
 }
 
 .introductory {
@@ -212,4 +213,32 @@ li {
 .SeeProjects{
     background-color: transparent;
     border: 1px solid #32CD32;
+}
+.LogIn, .SignUp{
+    transition: 0.1s;
+    width: 6vw;
+    font-size: 1em;
+    font-weight: 900;
+    height: 34px;
+    margin: 0;
+    border-radius: 20px;
+    background-color: #32CD32;
+    font-family: "Josefin Sans", sans-serif;
+    color: white;
+}
+.SignUp{
+    background-color: black;
+    border: none;
+}
+.NavItems{
+    display: flex;
+    gap: 20%;
+}
+.buttonContainer{
+    display: flex;
+    gap: 5px;
+}
+.btn:hover{
+    transition: 0.1s;
+    transform: scale(1.05);
 }
