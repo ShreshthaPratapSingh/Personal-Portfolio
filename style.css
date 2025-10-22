@@ -263,7 +263,7 @@ li {
     transition: 0.1s;
     transform: scale(1.05);
 }
-.godContainer{
+.godContainer_2{
     display: none;
 }
 .Heading_About, .Heading_College{
@@ -288,7 +288,7 @@ li {
     border: 2px solid white;
     animation: leftToRight 1s linear 0s forwards;
 }
-.aboutText{
+.aboutText, .CollText{
     font-family: "Josefin Sans", sans-serif;
     font-size: 1.3em;
     background-color: white;
@@ -302,4 +302,7 @@ li {
     height: auto;
     border-radius: 20px;
     animation: leftToRight 1s linear 0s forwards;
+}
+.CollText{
+    animation: rightToLeft 1s ease-in-out 0s forwards;
 }
