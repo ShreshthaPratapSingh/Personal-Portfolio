@@ -67,6 +67,9 @@ nav {
     color: white;
     box-shadow: 0px 0px 8px white;
 }
+a{
+    text-decoration: none;
+}
 
 nav div ul {
     display: flex;
