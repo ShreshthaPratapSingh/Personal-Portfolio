@@ -21,7 +21,7 @@ getLoginClick.addEventListener("click", function(){
 
             getLoginButton_cont.append(Setting_icon)
             getLogInOverlay_.style.display = "none";
-
+            document.body.style.overflowY = "visible";
         }
     }
 })
