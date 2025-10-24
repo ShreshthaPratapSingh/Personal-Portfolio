@@ -3,12 +3,21 @@ let getLoginButton = document.getElementsByClassName("LogIn")[0];
 let getLoginButton_cont = document.getElementsByClassName("buttonContainer")[0];
 let getLogInOverlay_ = document.getElementsByClassName("LogInSector")[0];
 
-getLoginClick.addEventListener("click", function(){
+getLoginClick.addEventListener("click", async function () {
     let getLoginTEXT = document.getElementById("SecretText").value;
     let getLoginPasskey = document.getElementById("LoginPass").value;
 
-    if(getLoginTEXT !== "" && getLoginPasskey !== ""){
-        if(getLoginTEXT === "abhiShreshtha@2323" && getLoginPasskey === "ab131177#"){
+    if (getLoginTEXT && getLoginPasskey) {
+        const response = await fetch("http://localhost:3000/verify-login", {
+            method: "POST",
+            headers: { "Content-type": "application/json" },
+            body: JSON.stringify({
+                username: getLoginTEXT,
+                password: getLoginPasskey
+            })
+        })
+        const result = await response.json();
+        if (result.success) {
             getLoginButton.remove();
             let Setting_BTN = document.createElement('span');
             Setting_BTN.innerHTML = "Settings";
@@ -22,6 +31,9 @@ getLoginClick.addEventListener("click", function(){
             getLoginButton_cont.append(Setting_icon)
             getLogInOverlay_.style.display = "none";
             document.body.style.overflowY = "visible";
+        }
+        else{
+            console.log("Failed to login")
         }
     }
 })
