@@ -67,7 +67,8 @@ nav {
     color: white;
     box-shadow: 0px 0px 8px white;
 }
-a{
+
+a {
     text-decoration: none;
 }
 
@@ -248,10 +249,9 @@ li {
     border: 1px solid #32CD32;
 }
 
-.LogIn,
-.SignUp {
+.LogIn {
     transition: 0.1s;
-    width: 6vw;
+    width: 12vw;
     font-size: 1em;
     font-weight: 900;
     height: 34px;
@@ -261,17 +261,91 @@ li {
     font-family: "Josefin Sans", sans-serif;
     color: white;
 }
-
-.SignUp {
+.LogInSector{
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.LogInBox{
+    position: relative;
+    width: 40vw;
+    height: 40vh;
     background-color: black;
-    border: none;
+    box-shadow: 0px 0px 10px white;
+    font-family: "Josefin Sans", sans-serif;
+    border-radius: 20px;
+}
+.crossIcon{
+    display: flex;
+    justify-content: flex-end;
+}
+.cross{
+    transition: 0.1s;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+}
+.cross:hover{
+    transition: 0.1s;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.SecretLabel, .LoginLabel{
+    color: white;
 }
 
 .NavItems {
     display: flex;
     gap: 20%;
 }
+.details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px;
 
+}
+#SecretText, #LoginPass{
+    width: 100%;
+    height: 40px;
+    padding-left: 50px;
+    border-radius: 10px;
+    font-size: 1.3em;
+    border: 2px solid #32CD32;
+    color: white;
+}
+#SecretText::placeholder, #LoginPass::placeholder{
+    color: grey;
+    font-family: "Josefin Sans", sans-serif;
+}
+#SecretText{
+    background: url(./images/icons/document.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#LoginPass{
+    background: url(./images/icons/locked.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.LogInHeading{
+    color: #32CD32;
+    margin: 20px;
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .buttonContainer {
     display: flex;
     gap: 5px;
@@ -283,7 +357,8 @@ li {
     transform: scale(1.05);
 }
 
-.godContainer_2, .godContainer_3{
+.godContainer_2,
+.godContainer_3 {
     display: none;
 }
 
@@ -296,9 +371,11 @@ li {
     font-size: 1.6em;
     font-family: "Archivo Black", sans-serif;
 }
-.skillIMG_unity{
+
+.skillIMG_unity {
     filter: brightness(0) invert(1);
 }
+
 .aboutMe,
 .aboutCollege {
     display: flex;
@@ -417,22 +494,48 @@ li {
 .Card5TXT {
     color: green;
 }
-.Card6TXT{
+
+.Card6TXT {
     color: red;
 }
+
 .Card1TXT_ {
     color: rgb(80, 80, 255);
 }
-.Card2TXT_{
+
+.Card2TXT_ {
     color: white;
 }
+
 .Card3TXT_ {
     color: rgb(129, 129, 255);
 }
-.Card4TXT_{
+
+.Card4TXT_ {
     color: orange;
 }
+
 .Libraries {
     color: white;
     font-size: 0.7em;
+}
+.Login_button{
+    transition: 0.1s;
+    width: 100px;
+    height: 40px;
+    background-color: #32CD32;
+    color: white;
+    border-radius: 20px;
+    font-size: 1.2em;
+}
+.Login_button:hover{
+    transition: 0.1;
+    transform: scale(1.1);
+    cursor: pointer;
+    box-shadow: 0px 0px 6px white;
+}
+.logInBTN{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
