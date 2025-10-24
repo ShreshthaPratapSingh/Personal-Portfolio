@@ -8,5 +8,5 @@ getLogInBTN.addEventListener("click", function(){
 })
 getClose.addEventListener("click", function(){
     document.body.style.overflowY = "visible";
-    getLogInOverlay.style.display = "none"
+    getLogInOverlay.style.display = "none";
 })

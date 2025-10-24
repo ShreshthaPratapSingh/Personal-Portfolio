@@ -102,6 +102,12 @@ nav div ul li:hover {
 
 .down {
     filter: brightness(0) invert(1);
+    width: 15px;
+    height: 15px;
+}
+.Sett{
+    width: 25px;
+    height: 25px;
 }
 
 li {
@@ -131,7 +137,17 @@ li {
     gap: 3em;
     animation: downToUp 0.5s;
 }
-
+.Settings_{
+    transition: 0.1s;
+    color: white;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: clamp(0.7rem, 2vw, 1.2rem);;
+}
+.Settings_:hover{
+    cursor: pointer;
+    transition: 0.1s;
+    text-shadow: 0px 0px 10px white, 0px 0px 10px white;
+}
 .Me {
     transition: 0.5s;
     width: 10vw;
@@ -356,6 +372,7 @@ li {
 }
 .buttonContainer {
     display: flex;
+    align-items: center;
     gap: 5px;
 }
 
