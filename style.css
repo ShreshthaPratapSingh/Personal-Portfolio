@@ -417,7 +417,9 @@ li {
 .Card5TXT {
     color: green;
 }
-
+.Card6TXT{
+    color: red;
+}
 .Card1TXT_ {
     color: rgb(80, 80, 255);
 }
@@ -427,7 +429,9 @@ li {
 .Card3TXT_ {
     color: rgb(129, 129, 255);
 }
-
+.Card4TXT_{
+    color: orange;
+}
 .Libraries {
     color: white;
     font-size: 0.7em;
