@@ -564,3 +564,8 @@ li {
     justify-content: center;
     margin-top: 20px;
 }
+.LoginForm{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
