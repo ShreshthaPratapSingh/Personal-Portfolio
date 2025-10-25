@@ -57,6 +57,53 @@
             </div>
         </div>
     </div>
+    <div class="SettingSector">
+        <div class="SettingBox">
+            <div class="SettingHeading">
+                <span class="Heading1_settings">Settings <img src="./images/icons/settings.png" alt="" class="Sett"></span>
+            </div>
+            <div class="crossIcon">
+                <img src="images/icons/cross.png" alt="" class="crossSetting">
+            </div>
+            <div class="details_Settings">
+                <span class="Heading2_settings">Select the action you want to perform:</span>
+                <div class="AddingTabsContainer">
+
+                    <select name="Adding" id="AddingTabs">
+                        <option value="Selected" selected disabled>Select Here</option>
+                        <option value="Technologies">Add new Technology</option>
+                        <option value="Projects">Add new Project</option>
+                    </select>
+                </div>
+                <div class="hiddenDetails">
+                    <div class="formholder">
+
+                        <form action="" autocomplete="off">
+                            <input type="text" class="TechBox" placeholder="Enter the Tech"><br>
+                            <input type="text" class="TechBox" placeholder="Enter the Libraries(if any)"><br>
+                            <input type="text" class="TechBox" placeholder="Enter the type" required><br>
+                            <input type="text" class="TechBox" placeholder="Enter the url of icon of tech" required>
+                        </form>
+                    </div>
+                </div>
+                <div class="hiddenDetails_Proj">
+                    <div class="formholder_Proj">
+
+                        <form action="" autocomplete="off">
+                            <input type="text" class="TechBox" placeholder="Enter the Project name"><br>
+                            <input type="text" class="TechBox" placeholder="Enter the Tech used"><br>
+                            <input type="text" class="TechBox" placeholder="Brief description" required><br>
+                            <input type="text" class="TechBox" placeholder="associated links"><br>
+                            <input type="text" class="TechBox" placeholder="Github Link">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="SettingBTN">
+                <button class="Go_button">Go</button>
+            </div>
+        </div>
+    </div>
     <div class="godContainer">
 
         <main>
@@ -291,6 +338,7 @@
     <script src="script.js"></script>
     <script src="LogIn.js"></script>
     <script src="verification.js"></script>
+    <script src="settingPage.js"></script>
 </body>
 
 </html>
