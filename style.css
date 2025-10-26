@@ -319,7 +319,7 @@ li {
 
 .LogInSector,
 .SettingSector,
-.HiringSector {
+.HiringSector{
     display: none;
     position: fixed;
     width: 100vw;
@@ -332,7 +332,19 @@ li {
     background-color: rgba(0, 0, 0, 0.7);
     animation: appearance 0.5s ease-in 0s forwards;
 }
-
+.NotificationsSector{
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.7);
+    animation: appearance 0.5s ease-in 0s forwards;
+}
 .SettingSector {
     display: flex;
     justify-content: center;
@@ -389,7 +401,19 @@ li {
     justify-content: center;
     align-items: center;
 }
-
+.NotificationsBox{
+    position: relative;
+    width: 40vw;
+    height: 60vh;
+    background-color: black;
+    box-shadow: 0px 0px 10px white;
+    font-family: "Josefin Sans", sans-serif;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .crossIcon {
     display: flex;
     justify-content: flex-end;

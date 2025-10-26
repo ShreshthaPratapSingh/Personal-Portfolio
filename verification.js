@@ -45,9 +45,33 @@ getLoginClick.addEventListener("click", async function () {
             notificationsBtn.classList.add('Notifications');
             getLoginButton_cont.append(notificationsBtn);
 
+            let getNotificationButton = document.getElementsByClassName("Notifications")[0];
             let getSettingButtonHere = document.getElementsByClassName("Settings_")[0];
             getSettingButtonHere.addEventListener("click", function () {
                 getSettingsHere.style.display = "flex";
+            })
+            getNotificationButton.addEventListener("click", function(){
+                let getNotificationSector = document.createElement('div');
+                getNotificationSector.classList.add('NotificationsSector');
+                let getNotificationsBox = document.createElement('div');
+                getNotificationsBox.classList.add('NotificationsBox');
+
+                let getCrossIcon_cont = document.createElement('div');
+                getCrossIcon_cont.classList.add = "crossIcon";
+                let getCrossIconNoti = document.createElement('img');
+                getCrossIconNoti.src = "images/icons/cross.png"
+                getCrossIconNoti.classList.add("cross");
+                getCrossIcon_cont.append(getCrossIconNoti);
+                getNotificationsBox.append(getCrossIcon_cont);
+                getNotificationSector.append(getNotificationsBox);
+                document.body.prepend(getNotificationSector);
+
+                getCrossIconNoti.addEventListener("click", function(){
+                    getNotificationSector.remove()
+                })
+
+
+                document.body.style.overflowY = "hidden";
             })
             
         }
