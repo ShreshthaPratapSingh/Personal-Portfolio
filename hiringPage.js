@@ -28,6 +28,18 @@ getHiringForm.addEventListener("submit", async(e)=>{
     console.log(response_Hire)
     if(response_Hire.success){
         getHiringSector.style.display = "none";
-        
+        let successMessagebox = document.createElement('div');
+        successMessagebox.classList.add("successMessage")
+        let successMessage = document.createElement('span');
+        successMessage.innerHTML = 'Sent Successfully! ThankYou!';
+        successMessagebox.append(successMessage)
+        document.body.prepend(successMessagebox);
+
+        setTimeout(() => {
+           successMessagebox.classList.add('move-back');
+           setTimeout(() => {
+            successMessagebox.remove();
+           }, 1000);
+        }, 3000);
     }
 })

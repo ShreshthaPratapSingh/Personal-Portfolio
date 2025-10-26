@@ -8,7 +8,22 @@ body {
     background-color: black;
     overflow-x: hidden;
 }
+@keyframes move-back {
+    from{
 
+    }
+    to{
+        transform: translateY(-5vh);
+    }
+}
+@keyframes appearingInFrame{
+    from{
+       transform: translateY(-5vh);
+    }
+    to{
+       transform: translateY(0);
+    }
+}
 @keyframes appearance {
     from {
         filter: opacity(0);
@@ -668,6 +683,17 @@ li {
     display: flex;
     justify-content: center;
 }
+.successMessage{
+    color: white;
+    background-color: #32CD32;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    font-family: "Archivo Black", sans-serif;
+    font-size: 1.3em;
+    align-items: center;
+    animation: appearingInFrame 0.5s ease-in 0s forwards;
+}
 .Login_button:hover,
 .Go_button:hover,
 .SubmitBTN:hover {
@@ -689,7 +715,9 @@ li {
     flex-direction: column;
     gap: 10px;
 }
-
+.move-back{
+    animation: move-back 1s ease-in 0s;
+}
 .formholder,
 .formholder_Proj {
     display: flex;
