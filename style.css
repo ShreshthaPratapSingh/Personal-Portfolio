@@ -340,7 +340,8 @@ li {
     font-family: "Josefin Sans", sans-serif;
     border-radius: 20px;
 }
-.HiringBox{
+
+.HiringBox {
     position: relative;
     width: 40vw;
     height: 60vh;
@@ -350,6 +351,7 @@ li {
     border-radius: 20px;
     padding: 20px;
 }
+
 .SettingBox {
     position: relative;
     width: 40vw;
@@ -370,7 +372,7 @@ li {
 }
 
 .cross,
-.crossSetting {
+.crossSetting, .crossHir {
     transition: 0.1s;
     position: absolute;
     top: 20px;
@@ -380,7 +382,7 @@ li {
 }
 
 .cross:hover,
-.crossSetting:hover {
+.crossSetting:hover, .crossHir:hover {
     transition: 0.1s;
     cursor: pointer;
     transform: scale(1.1);
@@ -550,19 +552,22 @@ li {
     font-size: 2em;
     margin-bottom: 30px;
 }
-.Heading_Hiring{
+
+.Heading_Hiring {
     display: flex;
     justify-content: center;
     font-size: 1.5em;
     color: #32CD32;
 }
-.Heading_Hiring_2{
+
+.Heading_Hiring_2 {
     display: flex;
     justify-content: center;
     font-size: 1em;
     margin-top: 10px;
     color: white;
 }
+
 .CollText {
     animation: rightToLeft 1s ease-in-out 0s forwards;
 }
@@ -646,7 +651,8 @@ li {
 }
 
 .Login_button,
-.Go_button {
+.Go_button,
+.SubmitBTN {
     transition: 0.1s;
     width: 100px;
     height: 40px;
@@ -655,9 +661,16 @@ li {
     border-radius: 20px;
     font-size: 1.2em;
 }
-
+.SubmitBTN{
+    margin: 20px;
+}
+.SendOfferBTN{
+    display: flex;
+    justify-content: center;
+}
 .Login_button:hover,
-.Go_button:hover {
+.Go_button:hover,
+.SubmitBTN:hover {
     transition: 0.1;
     transform: scale(1.1);
     cursor: pointer;
@@ -692,8 +705,9 @@ li {
     font-family: "Josefin Sans", sans-serif;
     border-radius: 5px;
     color: white;
-    width: 15vw;
+    width: 30vw;
     margin-top: 5px;
+    padding-left: 35px;
 }
 
 .hiddenDetails,
@@ -703,4 +717,54 @@ li {
 
 .SettingSector {
     display: none;
+}
+
+.HiringFormContainer {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.HireAsContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.HiringLabels {
+    color: white;
+}
+
+.BoxName {
+    background: url("./images/icons/user.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.BoxMail {
+    background: url("./images/icons/email.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.BoxNum {
+    background: url("./images/icons/phone-call.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.BoxOrg {
+    background: url("./images/icons/connection.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.titleHeading {
+    color: white;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.8em;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
 }

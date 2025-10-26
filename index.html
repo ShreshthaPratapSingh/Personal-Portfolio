@@ -107,11 +107,39 @@
     </div>
     <div class="HiringSector">
         <div class="HiringBox">
+            <div class="titleHeading">
+                Hiring Form
+            </div>
+            <div class="crossIcon">
+                <img src="images/icons/cross.png" alt="" class="crossHir">
+            </div>
             <div class="Heading_Hiring">
-                Hey, love to see that you are interested in my work!
+                Love to see that you are interested in my work!
             </div>
             <div class="Heading_Hiring_2">
                 Please fill out the form below so we can connect!
+            </div>
+            <div class="HiringFormContainer">
+
+                <form action="" autocomplete="off" class="HiringForm">
+                    <div class="HireAsContainer">
+                        <select name="HireAs" id="HireAsBox" required class="TechBox">
+                            <option value="placeholder" selected disabled>HireAs</option>
+                            <option value="Employee">Employee</option>
+                            <option value="Intern">Intern</option>
+                            <option value="Personal">Personal</option>
+                        </select>
+
+                    </div>
+                    <input type="text" id="EmployerName" placeholder="Enter the employer's name" class="TechBox BoxName" required><br>
+                    <input type="email" id = "email" placeholder="Enter the email" required class="TechBox BoxMail"><br>
+                    <input type="tel" id="Phone_number" placeholder="Enter phone number" required class="TechBox BoxNum"><br>
+                    <input type="text" id="OrgName" placeholder="Enter the Organization name(if any)" class="TechBox BoxOrg"><br>
+                    <div class="SendOfferBTN">
+
+                        <input type="submit" class="SubmitBTN" value="Send offer">
+                    </div>
+                </form>
             </div>
         </div>
     </div>
