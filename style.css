@@ -128,7 +128,16 @@ nav div ul li:hover {
     width: 25px;
     height: 25px;
 }
-
+.Notifications{
+    transition: 0.1s;
+    width: 25px;
+    height: 25px;
+}
+.Notifications:hover{
+    transition: 0.1s;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px white;
+}
 li {
     display: flex;
     align-items: center;
@@ -478,7 +487,7 @@ li {
 .buttonContainer {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 20px;
 }
 
 .btn:hover {

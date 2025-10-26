@@ -25,15 +25,26 @@ getLoginClick.addEventListener("click", async function () {
             let Setting_BTN = document.createElement('span');
             Setting_BTN.innerHTML = "Settings";
             Setting_BTN.classList.add('Settings_');
-            getLoginButton_cont.append(Setting_BTN);
+            let Setting_BTN_container = document.createElement('div');
+            Setting_BTN_container.style.display = "flex";
+            Setting_BTN_container.style.alignItems = "center";
+            Setting_BTN_container.append(Setting_BTN);
+            getLoginButton_cont.append(Setting_BTN_container);
 
             let Setting_icon = document.createElement('img');
             Setting_icon.src = "./images/icons/settings.png";
-            Setting_icon.classList.add('Sett')
+            Setting_icon.classList.add('Sett');
+            Setting_BTN_container.append(Setting_icon)
 
-            getLoginButton_cont.append(Setting_icon)
+            
             getLogInOverlay_.style.display = "none";
             document.body.style.overflowY = "visible";
+
+            let notificationsBtn = document.createElement('img');
+            notificationsBtn.src = "./images/icons/offer.png";
+            notificationsBtn.classList.add('Notifications');
+            getLoginButton_cont.append(notificationsBtn);
+
             let getSettingButtonHere = document.getElementsByClassName("Settings_")[0];
             getSettingButtonHere.addEventListener("click", function () {
                 getSettingsHere.style.display = "flex";
