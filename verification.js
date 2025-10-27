@@ -4,6 +4,7 @@ let getLoginButton_cont = document.getElementsByClassName("buttonContainer")[0];
 let getLogInOverlay_ = document.getElementsByClassName("LogInSector")[0];
 let getSettingsHere = document.getElementsByClassName("SettingSector")[0];
 let getCancelHere = document.getElementsByClassName("crossSetting")[0];
+let getLoginBox = document.getElementsByClassName("LogInBox")[0];
 
 getLoginClick.addEventListener("click", async function () {
     let getLoginTEXT = document.getElementById("SecretText").value;
@@ -86,7 +87,11 @@ getLoginClick.addEventListener("click", async function () {
 
         }
         else {
-            console.log("Failed to login")
+            let FailedLogin = document.createElement('span');
+            FailedLogin.innerHTML = "Login Failed"
+            FailedLogin.classList.add("FailedLogin");
+            getLoginBox.append(FailedLogin);
+
         }
         getCancelHere.addEventListener("click", function () {
             getSettingsHere.style.display = "none";
