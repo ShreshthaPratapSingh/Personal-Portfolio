@@ -5,7 +5,6 @@ let getLogInOverlay_ = document.getElementsByClassName("LogInSector")[0];
 let getSettingsHere = document.getElementsByClassName("SettingSector")[0];
 let getCancelHere = document.getElementsByClassName("crossSetting")[0];
 
-
 getLoginClick.addEventListener("click", async function () {
     let getLoginTEXT = document.getElementById("SecretText").value;
     let getLoginPasskey = document.getElementById("LoginPass").value;
@@ -36,7 +35,7 @@ getLoginClick.addEventListener("click", async function () {
             Setting_icon.classList.add('Sett');
             Setting_BTN_container.append(Setting_icon)
 
-            
+
             getLogInOverlay_.style.display = "none";
             document.body.style.overflowY = "visible";
 
@@ -50,30 +49,40 @@ getLoginClick.addEventListener("click", async function () {
             getSettingButtonHere.addEventListener("click", function () {
                 getSettingsHere.style.display = "flex";
             })
-            getNotificationButton.addEventListener("click", function(){
-                let getNotificationSector = document.createElement('div');
-                getNotificationSector.classList.add('NotificationsSector');
-                let getNotificationsBox = document.createElement('div');
-                getNotificationsBox.classList.add('NotificationsBox');
+            let getNotificationSector = document.createElement('div');
+            getNotificationSector.classList.add('NotificationsSector');
+            let getNotificationsBox = document.createElement('div');
+            getNotificationsBox.classList.add('NotificationsBox');
 
-                let getCrossIcon_cont = document.createElement('div');
-                getCrossIcon_cont.classList.add = "crossIcon";
-                let getCrossIconNoti = document.createElement('img');
-                getCrossIconNoti.src = "images/icons/cross.png"
-                getCrossIconNoti.classList.add("cross");
-                getCrossIcon_cont.append(getCrossIconNoti);
-                getNotificationsBox.append(getCrossIcon_cont);
-                getNotificationSector.append(getNotificationsBox);
-                document.body.prepend(getNotificationSector);
-
-                getCrossIconNoti.addEventListener("click", function(){
-                    getNotificationSector.remove()
+            let getCrossIcon_cont = document.createElement('div');
+            getCrossIcon_cont.classList.add = "crossIcon";
+            let getCrossIconNoti = document.createElement('img');
+            getCrossIconNoti.src = "images/icons/cross.png"
+            getCrossIconNoti.classList.add("cross");
+            getCrossIcon_cont.append(getCrossIconNoti);
+            getNotificationsBox.append(getCrossIcon_cont);
+            getNotificationSector.append(getNotificationsBox);
+            document.body.prepend(getNotificationSector);
+            const notiData = await fetch("http://localhost:3000/Notifications-Hiring", { method: "GET" });
+            const notiData_usable = await notiData.json();
+            let createNotiBox_cont = document.createElement('div');
+            createNotiBox_cont.classList.add("NewNoti_container");
+            notiData_usable.forEach(noti => {
+                let createNotiBox = document.createElement('div');
+                createNotiBox.classList.add("NewNoti");
+                createNotiBox_cont.prepend(createNotiBox);
+                getNotificationsBox.append(createNotiBox_cont);
+            });
+            getNotificationButton.addEventListener("click", function () {
+                getNotificationSector.style.display = "flex";
+                getCrossIconNoti.addEventListener("click", function () {
+                    getNotificationSector.style.display = "none";
                 })
 
 
                 document.body.style.overflowY = "hidden";
             })
-            
+
         }
         else {
             console.log("Failed to login")
