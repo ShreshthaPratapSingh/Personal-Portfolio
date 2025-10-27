@@ -413,6 +413,7 @@ li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow-y: scroll;
 }
 .crossIcon {
     display: flex;
@@ -828,4 +829,22 @@ li {
     margin: 10px;
     display: flex;
     justify-content: center;
+}
+.NewNoti_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    height: 100%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+.NewNoti{
+    height: auto;
+    padding: 20px;
+    border: 2px solid white;
+    color: white;
+    font-family: "Josefin Sans", sans-serif;
+    width: 30vw;
+    border-radius: 20px;
 }

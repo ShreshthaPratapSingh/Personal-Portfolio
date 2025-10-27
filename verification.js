@@ -72,6 +72,7 @@ getLoginClick.addEventListener("click", async function () {
                 createNotiBox.classList.add("NewNoti");
                 createNotiBox_cont.prepend(createNotiBox);
                 getNotificationsBox.append(createNotiBox_cont);
+                createNotiBox.innerHTML = `Role: ${noti.role} <br> From: ${noti.name}<br>Email: ${noti.email}<br>Contact: ${noti.number}<br>Organization: ${noti.organization}`
             });
             getNotificationButton.addEventListener("click", function () {
                 getNotificationSector.style.display = "flex";
