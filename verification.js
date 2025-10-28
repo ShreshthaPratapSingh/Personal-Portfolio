@@ -11,7 +11,7 @@ getLoginClick.addEventListener("click", async function () {
     let getLoginPasskey = document.getElementById("LoginPass").value;
 
     if (getLoginTEXT && getLoginPasskey) {
-        const response = await fetch("http://localhost:3000/verify-login", {
+        const response = await fetch("http://localhost:5000/verify-login", {
             method: "POST",
             headers: { "Content-type": "application/json" },
             body: JSON.stringify({
@@ -64,7 +64,7 @@ getLoginClick.addEventListener("click", async function () {
             getNotificationsBox.append(getCrossIcon_cont);
             getNotificationSector.append(getNotificationsBox);
             document.body.prepend(getNotificationSector);
-            const notiData = await fetch("http://localhost:3000/Notifications-Hiring", { method: "GET" });
+            const notiData = await fetch("http://localhost:5000/Notifications-Hiring", { method: "GET" });
             const notiData_usable = await notiData.json();
             let createNotiBox_cont = document.createElement('div');
             createNotiBox_cont.classList.add("NewNoti_container");

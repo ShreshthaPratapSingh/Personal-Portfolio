@@ -525,7 +525,7 @@ li {
 }
 
 .godContainer_2,
-.godContainer_3 {
+.godContainer_3, .godContainer_4 {
     display: none;
 }
 
@@ -586,7 +586,13 @@ li {
     animation: downToUp 0.5s ease-in-out 0s forwards;
     margin-bottom: 200px;
 }
-
+.Section-1_proj{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    animation: downToUp 0.5s ease-in-out 0s forwards;
+}
 .Section-2 {
     margin-bottom: 100px;
     display: flex;
@@ -606,7 +612,7 @@ li {
     justify-content: center;
 }
 .Heading_Sec1,
-.Heading_Sec2 {
+.Heading_Sec2, .headingProj{
     color: white;
     font-family: "Josefin Sans", sans-serif;
     font-size: 2em;
@@ -620,25 +626,24 @@ li {
     color: #32CD32;
 }
 
-.Heading_Hiring_2 {
-    display: flex;
-    justify-content: center;
-    font-size: 1em;
-    margin-top: 10px;
-    color: white;
-}
-
 .CollText {
     animation: rightToLeft 1s ease-in-out 0s forwards;
 }
 
-.skillCards {
+.skillCards, .projectsCard_container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 10px;
+    margin-bottom: 100px;
 }
-
-.skillCard {
+.ProjectsSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.skillCard, .projectCard {
     width: 80vw;
     display: flex;
     align-items: center;
@@ -648,23 +653,25 @@ li {
     border-radius: 10px;
 }
 
-.skillCard:hover {
+.skillCard:hover, .projectCard:hover {
     cursor: pointer;
     box-shadow: 0px 0px 10px grey, 0px 0px 10px grey;
 }
 
-.skillIMG {
+.skillIMG, .projectIMG {
     width: 60px;
     height: 70%;
     margin: 10px;
     border-radius: 10px;
 }
 
-.TechCARD {
+.TechCARD, .projCARD {
     font-size: 1.4em;
     font-family: "Josefin Sans", sans-serif;
 }
-
+.projCARD{
+    color: white;
+}
 .Card1TXT {
     color: orange;
 }
@@ -705,7 +712,7 @@ li {
     color: orange;
 }
 
-.Libraries {
+.Libraries, .Description {
     color: white;
     font-size: 0.7em;
 }

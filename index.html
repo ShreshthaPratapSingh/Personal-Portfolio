@@ -20,10 +20,10 @@
     <nav>
         <div class="NavItems">
             <ul>
-                <li class="HomeBtn">Home <img src="images/icons/down-arrow.png" alt=""
-                        class="down"></li>
-                <li class="AboutMe"><span>About me</span> <img src="images/icons/down-arrow.png" alt=""  class="down"></li>
-                <li>Projects <img src="images/icons/down-arrow.png" alt="" class="down"></li>
+                <li class="HomeBtn">Home <img src="images/icons/down-arrow.png" alt="" class="down"></li>
+                <li class="AboutMe"><span>About me</span> <img src="images/icons/down-arrow.png" alt="" class="down">
+                </li>
+                <li class="ProjectsBTN">Projects <img src="images/icons/down-arrow.png" alt="" class="down"></li>
                 <li class="Technology">Technologies <img src="images/icons/down-arrow.png" alt="" class="down">
                 </li>
             </ul>
@@ -60,7 +60,8 @@
     <div class="SettingSector">
         <div class="SettingBox">
             <div class="SettingHeading">
-                <span class="Heading1_settings">Settings <img src="./images/icons/settings.png" alt="" class="Sett"></span>
+                <span class="Heading1_settings">Settings <img src="./images/icons/settings.png" alt=""
+                        class="Sett"></span>
             </div>
             <div class="crossIcon">
                 <img src="images/icons/cross.png" alt="" class="crossSetting">
@@ -79,11 +80,14 @@
                     <div class="formholder">
 
                         <form action="" autocomplete="off" class="TechForm">
-                            <input type="text" class="TechBox" placeholder="Enter the Tech" name = "name"><br>
-                            <input type="text" class="TechBox" placeholder="Enter the Libraries(if any)" name = "library"><br>
-                            <input type="text" class="TechBox" placeholder="Enter the type" required name = "type"><br>
-                            <input type="text" class="TechBox" placeholder="Enter the url of icon of tech" required name = "url"><br>
-                            <input type="text" class="TechBox" placeholder="Enter the color code for font" required name = "color"><br>
+                            <input type="text" class="TechBox" placeholder="Enter the Tech" name="name"><br>
+                            <input type="text" class="TechBox" placeholder="Enter the Libraries(if any)"
+                                name="library"><br>
+                            <input type="text" class="TechBox" placeholder="Enter the type" required name="type"><br>
+                            <input type="text" class="TechBox" placeholder="Enter the url of icon of tech" required
+                                name="url"><br>
+                            <input type="text" class="TechBox" placeholder="Enter the color code for font" required
+                                name="color"><br>
                             <div class="SubmitCont">
 
                                 <button type="submit" class="Go_button GoSub">Submit</button>
@@ -94,13 +98,19 @@
                 <div class="hiddenDetails_Proj">
                     <div class="formholder_Proj">
 
-                        <form action="" autocomplete="off">
-                            <input type="text" class="TechBox" placeholder="Enter the Project name"><br>
-                            <input type="text" class="TechBox" placeholder="Enter the Tech used"><br>
-                            <input type="text" class="TechBox" placeholder="Brief description" required><br>
-                            <input type="text" class="TechBox" placeholder="associated links"><br>
-                            <input type="text" class="TechBox" placeholder="Github Link">
-                            
+                        <form action="" autocomplete="off" class="ProjForm">
+                            <input type="text" class="TechBox" placeholder="Enter the Project name" name="Projname"><br>
+                            <input type="text" class="TechBox" placeholder="Enter the Tech used" name="ProjTech"><br>
+                            <select name="type" id="CPorProject" class="TechBox">
+                                <option value="selected" selected disabled>Select CP or Project</option>
+                                <option value="CPlatform">Coding Platform</option>
+                                <option value="Project_form">Project</option>
+                            </select><br>
+                            <input type="text" class="TechBox" placeholder="associated links" name="links"><br>
+                            <input type="text" class="TechBox" placeholder="Github Link" name="gitLink">
+                            <div class="SubmitCont">
+                                <button type="submit" class="Go_button GoSub">Submit</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -136,10 +146,14 @@
                         </select>
 
                     </div>
-                    <input type="text" id="EmployerName" placeholder="Enter the employer's name" class="TechBox BoxName" required name="name"><br>
-                    <input type="email" id = "email" placeholder="Enter the email" required class="TechBox BoxMail" name="email"><br>
-                    <input type="tel" id="Phone_number" placeholder="Enter phone number" required class="TechBox BoxNum" name="number"><br>
-                    <input type="text" id="OrgName" placeholder="Enter the Organization name(if any)" class="TechBox BoxOrg" name="organization"><br>
+                    <input type="text" id="EmployerName" placeholder="Enter the employer's name" class="TechBox BoxName"
+                        required name="name"><br>
+                    <input type="email" id="email" placeholder="Enter the email" required class="TechBox BoxMail"
+                        name="email"><br>
+                    <input type="tel" id="Phone_number" placeholder="Enter phone number" required class="TechBox BoxNum"
+                        name="number"><br>
+                    <input type="text" id="OrgName" placeholder="Enter the Organization name(if any)"
+                        class="TechBox BoxOrg" name="organization"><br>
                     <div class="SendOfferBTN">
 
                         <input type="submit" class="SubmitBTN" value="Send offer">
@@ -277,18 +291,31 @@
                     Skilled At:
                 </div>
                 <div class="skillCards">
-                    
+
                 </div>
             </div>
         </div>
     </div>
-    <hr>
+    <div class="godContainer_4">
+        <div class="ProjectsSection">
+            <div class="Section-1_proj">
+                <div class="headingProj">
+                    Projects and Coding Platforms:
+                </div>
+                <div class="projectsCard_container">
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
     <script src="LogIn.js"></script>
     <script src="verification.js"></script>
     <script src="settingPage.js"></script>
     <script src="hiringPage.js"></script>
     <script src="Techchanges.js"></script>
+    <script src="ProjectChanges.js"></script>
 </body>
 
 </html>

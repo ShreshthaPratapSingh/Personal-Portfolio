@@ -1,6 +1,6 @@
 
 let getSettingButton = document.getElementsByClassName("Settings_")[0];
-let getGoButton = document.getElementsByClassName("Go_button")[1];
+let getGoButton = document.getElementsByClassName("Go_button")[2];
 let getSubmissionButton = document.getElementsByClassName("Go_button")[0];
 let getTechDetails = document.getElementsByClassName("hiddenDetails")[0];
 let getProjDetails = document.getElementsByClassName("hiddenDetails_Proj")[0];
@@ -39,7 +39,7 @@ getTechForm.addEventListener("submit", async function (e) {
         color: e.target.color.value
     }
     console.log(formData)
-    const sendTech_set = await fetch("http://localhost:3000/Setting-Tech-Data", {
+    const sendTech_set = await fetch("http://localhost:5000/Setting-Tech-Data", {
         method: "POST",
         headers: { "Content-type": "application/json" },
         body: JSON.stringify(formData)
