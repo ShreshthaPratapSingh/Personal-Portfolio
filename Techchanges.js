@@ -1,4 +1,4 @@
-let getSkillCard_container = document.getElementsByClassName("skillCards")[0];
+let getSkillCard_container_here = document.getElementsByClassName("skillCards")[0];
 async function fetchTechData(){
 try{
 
@@ -27,7 +27,7 @@ try{
         skillCard.appendChild(img);
         skillCard.appendChild(cardText);
     
-        getSkillCard_container.appendChild(skillCard);
+        getSkillCard_container_here.appendChild(skillCard);
     });
 }
 catch(err){
