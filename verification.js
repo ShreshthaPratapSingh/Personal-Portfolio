@@ -91,7 +91,6 @@ getLoginClick.addEventListener("click", async function () {
             FailedLogin.innerHTML = "Login Failed"
             FailedLogin.classList.add("FailedLogin");
             getLoginBox.append(FailedLogin);
-
         }
         getCancelHere.addEventListener("click", function () {
             getSettingsHere.style.display = "none";

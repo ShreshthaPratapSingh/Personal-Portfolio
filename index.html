@@ -78,12 +78,16 @@
                 <div class="hiddenDetails">
                     <div class="formholder">
 
-                        <form action="" autocomplete="off">
-                            <input type="text" class="TechBox" placeholder="Enter the Tech"><br>
-                            <input type="text" class="TechBox" placeholder="Enter the Libraries(if any)"><br>
-                            <input type="text" class="TechBox" placeholder="Enter the type" required><br>
-                            <input type="text" class="TechBox" placeholder="Enter the url of icon of tech" required><br>
-                            <input type="text" class="TechBox" placeholder="Enter the color code for font" required>
+                        <form action="" autocomplete="off" class="TechForm">
+                            <input type="text" class="TechBox" placeholder="Enter the Tech" name = "name"><br>
+                            <input type="text" class="TechBox" placeholder="Enter the Libraries(if any)" name = "library"><br>
+                            <input type="text" class="TechBox" placeholder="Enter the type" required name = "type"><br>
+                            <input type="text" class="TechBox" placeholder="Enter the url of icon of tech" required name = "url"><br>
+                            <input type="text" class="TechBox" placeholder="Enter the color code for font" required name = "color"><br>
+                            <div class="SubmitCont">
+
+                                <button type="submit" class="Go_button GoSub">Submit</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -96,12 +100,13 @@
                             <input type="text" class="TechBox" placeholder="Brief description" required><br>
                             <input type="text" class="TechBox" placeholder="associated links"><br>
                             <input type="text" class="TechBox" placeholder="Github Link">
+                            
                         </form>
                     </div>
                 </div>
             </div>
             <div class="SettingBTN">
-                <button class="Go_button">Go</button>
+                <button class="Go_button" type="submit">Go</button>
             </div>
         </div>
     </div>
@@ -328,49 +333,6 @@
                     </div>
                 </div>
             </div>
-            <div class="Section-2">
-                <div class="Heading_Sec2">
-                    In training:
-                </div>
-                <div class="skillCards">
-                    <div class="skillCard">
-                        <img src="./images/skills/React.png" alt="" class="skillIMG">
-                        <div class="Card1TXT_ TechCARD">
-                            React
-                            <div class="Libraries">
-                                Libraries: null<br> Category: Library
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skillCard">
-                        <img src="./images/skills/Unity.png" alt="" class="skillIMG skillIMG_unity">
-                        <div class="Card2TXT_ TechCARD">
-                            Unity
-                            <div class="Libraries">
-                                Prerequisites: C# <br>Category: Software
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skillCard">
-                        <img src="./images/skills/SQL.png" alt="" class="skillIMG">
-                        <div class="Card3TXT_ TechCARD">
-                            SQL
-                            <div class="Libraries">
-                                Libraries: null<br> Category: Database
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skillCard">
-                        <img src="./images/skills/icons8-blender-48.png" alt="" class="skillIMG">
-                        <div class="Card4TXT_ TechCARD">
-                            Blender
-                            <div class="Libraries">
-                                Libraries: null<br> Category: Software
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
     <hr>
@@ -379,6 +341,7 @@
     <script src="verification.js"></script>
     <script src="settingPage.js"></script>
     <script src="hiringPage.js"></script>
+    <script src="Techchanges.js"></script>
 </body>
 
 </html>
