@@ -6,6 +6,7 @@ let getGod_one = document.getElementsByClassName("godContainer")[0];
 let getGod_two = document.getElementsByClassName("godContainer_2")[0];
 let getGod_three = document.getElementsByClassName("godContainer_3")[0];
 let getGod_four = document.getElementsByClassName("godContainer_4")[0];
+let getProjects_Home = document.getElementsByClassName("SeeProjects")[0];
 
 getAbout.addEventListener("click", function () {
     getGod_one.style.display = "none";
@@ -26,6 +27,12 @@ getTech.addEventListener("click", function () {
     getGod_four.style.display = "none";
 })
 getProjects.addEventListener("click", function(){
+    getGod_one.style.display = "none";
+    getGod_two.style.display = "none";
+    getGod_three.style.display = "none";
+    getGod_four.style.display = "block";
+})
+getProjects_Home.addEventListener("click", function(){
     getGod_one.style.display = "none";
     getGod_two.style.display = "none";
     getGod_three.style.display = "none";
