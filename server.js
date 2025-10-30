@@ -1,3 +1,5 @@
+import dotenv from "dotenv";
+dotenv.config();
 import express from "express";
 import bcrypt from "bcrypt";
 import cors from "cors";
@@ -7,8 +9,8 @@ const port = 5000;
 
 const Hire_connection = await mongoose.connect("mongodb://localhost:27017/Hiring");
 
-const USERPASS = "abhiShreshtha@2323";
-const HASHEDPASS = await bcrypt.hash("ab131177#", 10);
+const USERPASS = process.env.USER;
+const HASHEDPASS = await bcrypt.hash(process.env.PASS, 10);
 
 app.use(cors());
 app.use(express.json())
