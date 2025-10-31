@@ -4,7 +4,7 @@ let getProjectContainer = document.getElementsByClassName("projectsCard_containe
 
 async function fetchProjData() {
     const ProjData = await fetch("http://localhost:5000/Sending_Proj_data", { method: "POST" })
-    const data = await ProjData.json()
+    const data = await ProjData.json();
     data.forEach(element => {
         const aTag = document.createElement("a");
         aTag.href = `${element.Link}`; 
