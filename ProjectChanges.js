@@ -3,7 +3,7 @@ let getSettingsPanel = document.getElementsByClassName("hiddenDetails_Proj")[0];
 let getProjectContainer = document.getElementsByClassName("projectsCard_container")[0];
 
 async function fetchProjData() {
-    const ProjData = await fetch("http://localhost:5000/Sending_Proj_data", { method: "POST" })
+    const ProjData = await fetch("https://portfolio-backend-ta0x.onrender.com/Sending_Proj_data", { method: "POST" })
     const data = await ProjData.json();
     data.forEach(element => {
         const aTag = document.createElement("a");
@@ -55,7 +55,7 @@ getProjectForm.addEventListener("submit", async function (e) {
         Github: e.target.gitLink.value
     }
 
-    const sendData_proj = await fetch("http://localhost:5000/Send_Proj_data", {
+    const sendData_proj = await fetch("https://portfolio-backend-ta0x.onrender.com/Send_Proj_data", {
         method: "POST",
         headers: { "Content-type": "application/json" },
         body: JSON.stringify(formData)

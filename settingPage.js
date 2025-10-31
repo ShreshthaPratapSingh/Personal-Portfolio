@@ -39,7 +39,7 @@ getTechForm.addEventListener("submit", async function (e) {
         color: e.target.color.value
     }
     console.log(formData)
-    const sendTech_set = await fetch("http://localhost:5000/Setting-Tech-Data", {
+    const sendTech_set = await fetch("https://portfolio-backend-ta0x.onrender.com/Setting-Tech-Data", {
         method: "POST",
         headers: { "Content-type": "application/json" },
         body: JSON.stringify(formData)

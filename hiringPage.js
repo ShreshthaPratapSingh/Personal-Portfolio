@@ -20,7 +20,7 @@ getHiringForm.addEventListener("submit", async(e)=>{
         number: e.target.number.value,
         organization: e.target.organization.value
     }
-    const send = await fetch("http://localhost:5000/send-Hform-data", {
+    const send = await fetch("https://portfolio-backend-ta0x.onrender.com/send-Hform-data", {
         method: "POST",
         headers: {"Content-type":"application/json"},
         body: JSON.stringify(formdata)

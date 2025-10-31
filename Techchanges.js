@@ -2,7 +2,7 @@ let getSkillCard_container_here = document.getElementsByClassName("skillCards")[
 async function fetchTechData(){
 try{
 
-    const TechData = await fetch("http://localhost:5000/Tech_Setting", { method: "GET" })
+    const TechData = await fetch("https://portfolio-backend-ta0x.onrender.com/Tech_Setting", { method: "GET" })
     const Tech_Data_json = await TechData.json();
     Tech_Data_json.forEach(element => {
     

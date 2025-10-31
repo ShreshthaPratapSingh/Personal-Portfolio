@@ -7,7 +7,7 @@ import mongoose from "mongoose";
 const app = express();
 const port = (process.env.PORT) || 5000;
 
-mongoose.connect("mongodb+srv://jeemains1706_db_user:OQ7z4hKTMK7Jwe6Z@cluster0.ww9p8ss.mongodb.net/hiring").then((data) => {
+mongoose.connect(`mongodb+srv://${process.env.ATLASUSER}:${process.env.ATLASPASS}@cluster0.ww9p8ss.mongodb.net/hiring`).then((data) => {
   console.log("DB connected Successfuly")
 }).catch((err) => {
   console.log("DB ERROR : ", err);
